@@ -165,6 +165,7 @@ onUnmounted(() => {
         </div>
 
 
+
         <!-- Availability Badge -->
         <div class="status-badge desktop-only">
           <span class="status-dot"></span>
@@ -222,6 +223,9 @@ onUnmounted(() => {
           </button>
 
           <div class="mobile-menu-footer">
+            <a href="./CV_Tran_Anh_Kiet.pdf" download="CV_Tran_Anh_Kiet.pdf" class="cv-btn full-width">
+              📄 {{ t.downloadCV || 'Tải CV' }} (PDF)
+            </a>
             <div class="status-badge">
               <span class="status-dot"></span>
               <span class="status-text">{{ t.status }}</span>
@@ -233,6 +237,23 @@ onUnmounted(() => {
         </div>
       </div>
     </transition>
+
+    <!-- Floating Corner Download CV Button -->
+    <a
+      href="./CV_Tran_Anh_Kiet.pdf"
+      download="CV_Tran_Anh_Kiet.pdf"
+      class="floating-cv-btn"
+      @mouseenter="playHoverSound"
+      :title="t.downloadCV || 'Tải CV'"
+    >
+      <span class="floating-pulse"></span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <span class="floating-text">{{ t.downloadCV || 'Tải CV' }}</span>
+    </a>
   </header>
 </template>
 
@@ -665,6 +686,70 @@ onUnmounted(() => {
   justify-content: center;
 }
 
+.cv-btn {
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  color: #06b6d4;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
+}
+
+.cv-btn:hover {
+  background: rgba(6, 182, 212, 0.25);
+  border-color: #06b6d4;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+/* Floating Corner Download CV Button */
+.floating-cv-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.floating-cv-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 15px 35px rgba(6, 182, 212, 0.6);
+  background: linear-gradient(135deg, #0891b2, #2563eb);
+}
+
+.floating-pulse {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 11px;
+  height: 11px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4);
+  animation: pulseDot 2s infinite;
+}
+
 @media (max-width: 960px) {
   .desktop-links,
   .desktop-only {
@@ -672,6 +757,15 @@ onUnmounted(() => {
   }
   .mobile-toggle {
     display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-cv-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    font-size: 13px;
   }
 }
 </style>

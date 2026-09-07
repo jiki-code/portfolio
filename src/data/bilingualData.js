@@ -10,6 +10,7 @@ export const i18nText = {
       contact: 'Liên hệ',
       status: 'Sẵn sàng nhận việc',
       cta: 'Cùng hợp tác',
+      downloadCV: 'Tải CV',
       soundOn: 'Tắt âm thanh',
       soundOff: 'Bật âm thanh'
     },
@@ -27,6 +28,7 @@ export const i18nText = {
       desc: 'Chuyên thiết kế & phát triển ứng dụng Web/App responsive, tốc độ cao và hệ thống doanh nghiệp phức tạp (WMS, TMS, E-commerce & Payment Services). Biến ý tưởng thành sản phẩm chuẩn mực.',
       btnProjects: 'Khám phá dự án',
       btnCopyEmail: 'Sao chép Email',
+      btnDownloadCV: 'Tải CV',
       btnLinkedIn: 'LinkedIn ↗',
       scrollDown: 'Cuộn xuống',
       badgeFast: 'Tốc độ cao & Responsive',
@@ -155,6 +157,7 @@ export const i18nText = {
       contact: 'Contact',
       status: 'Available for hire',
       cta: "Let's Talk",
+      downloadCV: 'Download CV',
       soundOn: 'Mute Audio',
       soundOff: 'Enable Audio'
     },
@@ -172,6 +175,7 @@ export const i18nText = {
       desc: 'Specialized in building high-performance, responsive Web/App applications and complex enterprise systems (WMS, TMS, E-commerce & Payment Services). Transforming ideas into scalable products.',
       btnProjects: 'Explore Projects',
       btnCopyEmail: 'Copy Email',
+      btnDownloadCV: 'Download CV',
       btnLinkedIn: 'LinkedIn ↗',
       scrollDown: 'Scroll down',
       badgeFast: 'Fast Load & Responsive',

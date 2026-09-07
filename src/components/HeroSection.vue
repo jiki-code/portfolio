@@ -137,6 +137,20 @@ onUnmounted(() => {
             </svg>
           </button>
 
+          <a
+            href="./CV_Tran_Anh_Kiet.pdf"
+            download="CV_Tran_Anh_Kiet.pdf"
+            class="btn-cv"
+            @mouseenter="playHoverSound"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>{{ t.btnDownloadCV || 'Tải CV' }}</span>
+          </a>
+
           <button class="btn-secondary" @click="copyEmail" @mouseenter="playHoverSound">
             <span>{{ t.btnCopyEmail }}</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -394,6 +408,30 @@ onUnmounted(() => {
   border-color: rgba(6, 182, 212, 0.4);
   color: #06b6d4;
   transform: translateY(-2px);
+}
+
+.btn-cv {
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  color: #06b6d4;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+}
+
+.btn-cv:hover {
+  background: rgba(6, 182, 212, 0.3);
+  border-color: #06b6d4;
+  color: #fff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
 }
 
 .btn-ghost {
