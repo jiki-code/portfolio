@@ -2,13 +2,28 @@
 import { computed } from 'vue'
 import { currentLang } from '../stores/languageStore'
 import { i18nText } from '../data/bilingualData'
-import { experiences } from '../data/resumeData'
+import { experiences, getText } from '../data/resumeData'
 import { playHoverSound } from '../utils/audio'
 import { useScrollReveal } from '../utils/useScrollReveal'
 
 useScrollReveal()
 
 const t = computed(() => i18nText[currentLang.value].experience)
+
+const localizedExperiences = computed(() => {
+  const lang = currentLang.value
+  return experiences.map(exp => ({
+    ...exp,
+    period: getText(exp.period, lang),
+    type: getText(exp.type, lang),
+    summary: getText(exp.summary, lang),
+    highlights: exp.highlights ? exp.highlights.map(h => getText(h, lang)) : null,
+    projects: exp.projects ? exp.projects.map(p => ({
+      ...p,
+      desc: getText(p.desc, lang)
+    })) : null
+  }))
+})
 </script>
 
 <template>
@@ -30,7 +45,7 @@ const t = computed(() => i18nText[currentLang.value].experience)
         <div class="timeline-line"></div>
 
         <div
-          v-for="(exp, index) in experiences"
+          v-for="(exp, index) in localizedExperiences"
           :key="exp.id"
           class="timeline-item reveal-init"
           :class="`delay-${(index + 1) * 100}`"

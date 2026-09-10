@@ -2,12 +2,13 @@
 import { ref, computed } from 'vue'
 import { currentLang } from '../stores/languageStore'
 import { i18nText } from '../data/bilingualData'
-import { publicProjects } from '../data/resumeData'
+import { publicProjects, getText } from '../data/resumeData'
 import { playClickSound, playHoverSound } from '../utils/audio'
 import { useScrollReveal } from '../utils/useScrollReveal'
 
 useScrollReveal()
 
+const emit = defineEmits(['select-project'])
 const activeFilter = ref('all')
 
 const t = computed(() => i18nText[currentLang.value].projects)
@@ -22,13 +23,29 @@ const categories = computed(() => [
 ])
 
 const filteredProjects = computed(() => {
-  if (activeFilter.value === 'all') return publicProjects
-  return publicProjects.filter(p => p.category === activeFilter.value)
+  const lang = currentLang.value
+  const rawList = activeFilter.value === 'all'
+    ? publicProjects
+    : publicProjects.filter(p => p.category === activeFilter.value)
+
+  return rawList.map(p => ({
+    ...p,
+    badge: getText(p.badge, lang),
+    desc: getText(p.desc, lang),
+    features: p.features ? p.features.map(f => getText(f, lang)) : null
+  }))
 })
 
 function setFilter(id) {
   playClickSound()
   activeFilter.value = id
+}
+
+function openProjectModal(project) {
+  if (project.id === 'tms-gonsa' || project.id === 'dms-kimtin') {
+    playClickSound()
+    emit('select-project', project)
+  }
 }
 </script>
 
@@ -66,6 +83,8 @@ function setFilter(id) {
           v-for="project in filteredProjects"
           :key="project.id"
           class="project-card glowing-card reveal-init"
+          :class="{ 'clickable-card': project.id === 'tms-gonsa' || project.id === 'dms-kimtin' }"
+          @click="openProjectModal(project)"
           @mouseenter="playHoverSound"
         >
           <!-- Card Header Visual Banner -->
@@ -105,9 +124,14 @@ function setFilter(id) {
 
             <!-- Footer Actions -->
             <div class="card-actions">
-              <div class="status-chip">
-                <span>✨ Auto</span>
-              </div>
+              <button
+                v-if="project.id === 'tms-gonsa' || project.id === 'dms-kimtin'"
+                class="details-btn"
+                @click.stop="openProjectModal(project)"
+                @mouseenter="playHoverSound"
+              >
+                <span>🔍 {{ t.btnDetails }}</span>
+              </button>
 
               <a
                 v-if="project.link"
@@ -116,6 +140,7 @@ function setFilter(id) {
                 rel="noreferrer"
                 class="live-link"
                 title="Live Demo"
+                @click.stop
                 @mouseenter="playHoverSound"
               >
                 <span>{{ t.btnLive }}</span>
@@ -396,6 +421,39 @@ function setFilter(id) {
   padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: auto;
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clickable-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(6, 182, 212, 0.25);
+}
+
+.details-btn {
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: #c084fc;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.details-btn:hover {
+  background: rgba(139, 92, 246, 0.3);
+  border-color: #a855f7;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
 }
 
 .status-chip {

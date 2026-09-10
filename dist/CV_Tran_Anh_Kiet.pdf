@@ -4,7 +4,7 @@
 3 0 obj <</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R>> endobj
 4 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica>> endobj
 5 0 obj <</Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold>> endobj
-6 0 obj <</Length 5396>> stream
+6 0 obj <</Length 4696>> stream
 BT /F2 20 Tf 50 750 Td (TRAN ANH KIET) Tj ET
 BT /F1 12 Tf 50 732 Td (SOFTWARE ENGINEER) Tj ET
 BT /F1 9 Tf 50 715 Td (DOB: 23/03/1998  |  Location: Ho Chi Minh City, Vietnam  |  Phone: 0924435345  |  Email: jikid0973@gmail.com) Tj ET
@@ -13,46 +13,44 @@ BT /F1 9 Tf 50 703 Td (LinkedIn: linkedin.com/in/kiet-tran-819613223  |  Portfol
 BT /F2 11 Tf 50 675 Td (PROFESSIONAL SUMMARY) Tj ET
 BT /F1 9 Tf 50 660 Td (Software Engineer with 5 years of experience delivering banking, insurance, and payment-integration solutions) Tj ET
 BT /F1 9 Tf 50 648 Td (alongside logistics, warehouse, transportation, and e-commerce systems -- including on-site work at Sacombank) Tj ET
-BT /F1 9 Tf 50 636 Td (and freelance work for BaoViet Insurance. Experienced in TypeScript, React.js, Next.js, Vue.js, REST API integration,) Tj ET
+BT /F1 9 Tf 50 636 Td (and freelance work for BaoViet Insurance. Experienced in TypeScript, React.js, Next.js, Vue.js, React Native...) Tj ET
 BT /F1 9 Tf 50 624 Td (state management, and responsive UI development. Familiar with Node.js, Express.js, MySQL, MongoDB, Docker.) Tj ET
 BT /F2 11 Tf 50 604 Td (TECHNICAL SKILLS) Tj ET
-BT /F2 9 Tf 50 589 Td (Frontend:) Tj /F1 9 Tf 100 589 Td (React.js, Next.js, Vue.js (Nuxt.js), JavaScript, TypeScript, HTML, CSS/SCSS, Tailwind CSS) Tj ET
-BT /F2 9 Tf 50 575 Td (State & API:) Tj /F1 9 Tf 100 575 Td (Redux, Zustand, Pinia, Vuex, Axios, TanStack Query, Swagger, Postman, Payment gateway) Tj ET
-BT /F2 9 Tf 50 561 Td (Backend & Data:) Tj /F1 9 Tf 100 561 Td (.NET, Node.js, Express.js, MySQL, PostgreSQL, MongoDB, Supabase, Firebase, Convex) Tj ET
-BT /F2 9 Tf 50 547 Td (Tools & Workflow:) Tj /F1 9 Tf 100 547 Td (Docker, Git, CI/CD Jenkins & GitHub Actions, Jira, Trello, Agile/Scrum, Figma, Jest, GCP) Tj ET
-BT /F2 9 Tf 50 533 Td (AI Tools:) Tj /F1 9 Tf 100 533 Td (Gemini, OpenAI, Claude Code, Cursor) Tj ET
-BT /F2 9 Tf 50 519 Td (Familiar With:) Tj /F1 9 Tf 100 519 Td (Angular, React Native, WordPress) Tj ET
+BT /F2 9 Tf 50 589 Td (Frontend & Mobile:) Tj /F1 9 Tf 130 589 Td (React.js, Next.js, Vue.js (Nuxt.js), React Native, JavaScript, TypeScript, Tailwind CSS) Tj ET
+BT /F2 9 Tf 50 575 Td (State & API:) Tj /F1 9 Tf 130 575 Td (Redux, Zustand, Pinia, Vuex, Axios, TanStack Query, Swagger, Postman, Payment gateway) Tj ET
+BT /F2 9 Tf 50 561 Td (Backend & Data:) Tj /F1 9 Tf 130 561 Td (.NET, Node.js, Express.js, MySQL, PostgreSQL, MongoDB, Supabase, Firebase, Convex) Tj ET
+BT /F2 9 Tf 50 547 Td (Tools & Workflow:) Tj /F1 9 Tf 130 547 Td (Docker, Git, CI/CD Jenkins & GitHub Actions, Jira, Trello, Agile/Scrum, Figma, Jest, GCP) Tj ET
+BT /F2 9 Tf 50 533 Td (AI Tools:) Tj /F1 9 Tf 130 533 Td (Gemini, OpenAI, Claude Code, Cursor) Tj ET
+BT /F2 9 Tf 50 519 Td (Familiar With:) Tj /F1 9 Tf 130 519 Td (Angular, WordPress...) Tj ET
 BT /F2 11 Tf 50 495 Td (PROFESSIONAL EXPERIENCE) Tj ET
 BT /F2 10 Tf 50 478 Td (Frontend Developer | Freelance contract) Tj /F1 9 Tf 440 478 Td (01/2026 - 06/2026) Tj ET
 BT /F2 9.5 Tf 50 464 Td (BaoViet Insurance) Tj ET
 BT /F1 9 Tf 60 450 Td (- Deployed new features, fixed errors, and linked transaction flows for VietQR, MoMo, and ZaloPay.) Tj ET
-BT /F1 9 Tf 60 438 Td (- Wrote Jest unit tests for business logic.) Tj ET
-BT /F1 8.5 Tf 60 426 Td (Tech: Next.js (React), Tailwind CSS, shadcn/ui, TanStack Query, WebSocket, Jest, VietQR, MoMo, ZaloPay API, GCP) Tj ET
-BT /F2 10 Tf 50 402 Td (Full-stack Developer | Bizman Media) Tj /F1 9 Tf 440 402 Td (01/2025 - 07/2026) Tj ET
-BT /F1 9 Tf 60 388 Td (- Developed web modules for internal operations and consumer products using Next.js, Express, MySQL, MongoDB.) Tj ET
-BT /F1 9 Tf 60 374 Td (- Backoffice: Attendance, break-time tracking, telesales management & SEO domain management.) Tj ET
-BT /F1 8.5 Tf 60 362 Td (  Tech: Next.js, Express.js, MySQL, MongoDB, Firebase, REST APIs, Socket.IO, JWT/OAuth2, Redux, Docker) Tj ET
-BT /F1 9 Tf 60 348 Td (- 5Gao: Humorous social network supporting posting, groups, livestream management, horoscope features.) Tj ET
-BT /F1 8.5 Tf 60 336 Td (  Tech: Next.js, Express.js, MySQL, Supabase, Socket.IO, Docker, Ant Design, CI/CD GitHub Actions) Tj ET
-BT /F1 9 Tf 60 322 Td (- Internal Chat: Real-time chat app with department management, 1-on-1 & group chat, role-based access.) Tj ET
-BT /F1 8.5 Tf 60 310 Td (  Tech: Next.js, Express.js, Convex, MongoDB, PostgreSQL, Socket.IO, JWT/OAuth2, ShadCN UI) Tj ET
-BT /F2 10 Tf 50 286 Td (Frontend Developer | MEKSMART) Tj /F1 9 Tf 440 286 Td (07/2022 - 11/2024) Tj ET
-BT /F1 9 Tf 60 272 Td (- Sub-lead Frontend (12/2023 - 11/2024): Led frontend team of 6 members, code review & task assignments.) Tj ET
-BT /F1 9 Tf 60 258 Td (- DMS Kim Tin: Transportation management platform with operational dashboards & map workflows.) Tj ET
-BT /F1 8.5 Tf 60 246 Td (  Tech: Vue.js, Bootstrap Vue, Chart.js, vue-i18n, AG Grid, Leaflet, Firebase, Vuex, Vitest) Tj ET
-BT /F1 9 Tf 60 232 Td (- WMS Elmich: Warehouse management system covering inbound/outbound, inventory, reporting & data import.) Tj ET
-BT /F1 8.5 Tf 60 220 Td (  Tech: Vue.js, Tailwind CSS, Pinia, Chart.js, Ant Design, i18n) Tj ET
-BT /F1 9 Tf 60 206 Td (- TMS Gonsa: Delivery management solution for orders and shipments, third-party integrations (SAP, WMS, NEOX).) Tj ET
-BT /F1 8.5 Tf 60 194 Td (  Tech: Vue.js, Tailwind CSS, Vuex, Google Maps, Axios, Swagger, GCP) Tj ET
-BT /F1 9 Tf 60 180 Td (- TSM Sovigaz: Transportation management system with Google Maps route drawing & salary calculations.) Tj ET
-BT /F1 8.5 Tf 60 168 Td (  Tech: Angular, TypeScript, RxJS, Bootstrap, Google Maps, Chart.js, Firebase) Tj ET
-BT /F2 10 Tf 50 144 Td (Frontend Developer | VINOVA) Tj /F1 9 Tf 440 144 Td (10/2021 - 07/2022) Tj ET
-BT /F1 9 Tf 60 130 Td (- Built and maintained React-based CMS & e-commerce applications (CMS Labbit, CMS FTLOL, CMS SMTHGOOD).) Tj ET
-BT /F2 10 Tf 50 106 Td (Full-stack Developer | G-SOFT) Tj /F1 9 Tf 440 106 Td (03/2021 - 09/2021) Tj ET
-BT /F1 9 Tf 60 92 Td (- Worked on-site on an asset management module, requirement gathering, new features & bug fixes.) Tj ET
-BT /F2 11 Tf 50 68 Td (EDUCATION & CERTIFICATION) Tj ET
-BT /F1 9 Tf 50 54 Td (2016 - 2021: Software Technology - Ho Chi Minh City University of Technology (HUTECH)) Tj ET
-BT /F1 9 Tf 50 42 Td (2019 - 2022: English B1 Certificate (HUTECH); TOEIC 550) Tj ET
+BT /F1 8.5 Tf 60 438 Td (Tech: Next.js (React), Tailwind CSS, shadcn/ui, TanStack Query, WebSocket, Jest, VietQR, MoMo, ZaloPay API, GCP) Tj ET
+BT /F2 10 Tf 50 416 Td (Full-stack Developer | Bizman Media) Tj /F1 9 Tf 440 416 Td (01/2025 - 07/2026) Tj ET
+BT /F1 9 Tf 60 402 Td (- Backoffice, 5Gao Social Network (5gaoo.com), Real-time Internal Chat) Tj ET
+BT /F1 8.5 Tf 60 390 Td (  Tech: Next.js, Express.js, MySQL, PostgreSQL, MongoDB, Convex, Firebase, Socket.IO, Redux, Docker) Tj ET
+BT /F2 10 Tf 50 368 Td (Frontend & Mobile Developer | MEKSMART) Tj /F1 9 Tf 440 368 Td (07/2022 - 11/2024) Tj ET
+BT /F1 9 Tf 60 354 Td (- Sub-lead Frontend (12/2023 - 11/2024): Led frontend team of 6 members.) Tj ET
+BT /F1 9 Tf 60 340 Td (- Developed WMS Elmich (elmich.wms.staging.meksmart.com), TMS Gonsa & DMS Kim Tin.) Tj ET
+BT /F1 8.5 Tf 60 328 Td (  Tech: Vue.js, React Native, Bootstrap Vue, Chart.js, vue-i18n, AG Grid, Leaflet, Google Maps, Firebase, Vuex) Tj ET
+BT /F2 10 Tf 50 306 Td (Frontend Developer | VINOVA) Tj /F1 9 Tf 440 306 Td (10/2021 - 07/2022) Tj ET
+BT /F1 9 Tf 60 292 Td (- CMS Labbit (vinova.sg/portfolio/labbit/#pll_switcher), FTLOL (fortheloveoflaundry.com), CMS SMTHGOOD) Tj ET
+BT /F1 8.5 Tf 60 280 Td (  Tech: React.js, Redux, Redux-Saga, Material UI, TypeScript, PayPal API, Jenkins) Tj ET
+BT /F2 10 Tf 50 258 Td (Full-stack Developer | G-SOFT) Tj /F1 9 Tf 440 258 Td (03/2021 - 09/2021) Tj ET
+BT /F1 9 Tf 60 244 Td (- Asset Management System (it.gsoft.com.vn:3035) on-site at Sacombank.) Tj ET
+BT /F1 8.5 Tf 60 232 Td (  Tech: ASP.NET, SQL Server, Angular, SVN, Bootstrap) Tj ET
+BT /F2 11 Tf 50 208 Td (SELECTED DEMO LINKS) Tj ET
+BT /F1 9 Tf 50 194 Td (- Portfolio: https://jiki-code.github.io/portfolio/) Tj ET
+BT /F1 9 Tf 50 182 Td (- WMS Elmich: https://elmich.wms.staging.meksmart.com/) Tj ET
+BT /F1 9 Tf 50 170 Td (- CMS Labbit: https://vinova.sg/portfolio/labbit/#pll_switcher) Tj ET
+BT /F1 9 Tf 50 158 Td (- For The Love of Laundry: https://fortheloveoflaundry.com/) Tj ET
+BT /F1 9 Tf 50 146 Td (- G-SOFT System: https://it.gsoft.com.vn:3035/) Tj ET
+BT /F1 9 Tf 50 134 Td (- 5Gao Social: https://5gaoo.com/) Tj ET
+BT /F1 9 Tf 50 122 Td (- TMS Gonsa: https://tms-staging.gonsa.vn/) Tj ET
+BT /F1 9 Tf 50 110 Td (- DMS Kim Tin: https://uatcontrol-dms.kimtingroup.com:44354/) Tj ET
+BT /F2 11 Tf 50 86 Td (EDUCATION & CERTIFICATION) Tj ET
+BT /F1 9 Tf 50 72 Td (2016 - 2021: Software Technology - HUTECH University  |  2019 - 2022: English B1; TOEIC 550) Tj ET
 endstream endobj
 xref
 0 7
@@ -65,5 +63,5 @@ xref
 0000000392 00000 n 
 trailer <</Size 7 /Root 1 0 R>>
 startxref
-5796
+5096
 %%EOF

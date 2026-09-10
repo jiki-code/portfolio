@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import { currentLang } from '../stores/languageStore'
 import { i18nText } from '../data/bilingualData'
-import { skillCategories } from '../data/resumeData'
+import { skillCategories, getText } from '../data/resumeData'
 import { playClickSound, playHoverSound } from '../utils/audio'
 import { useScrollReveal } from '../utils/useScrollReveal'
 
@@ -22,10 +22,19 @@ const categories = computed(() => [
 ])
 
 const filteredCategories = computed(() => {
-  if (activeCategory.value === 'all') {
-    return skillCategories
-  }
-  return skillCategories.filter(cat => cat.id === activeCategory.value)
+  const lang = currentLang.value
+  const rawList = activeCategory.value === 'all'
+    ? skillCategories
+    : skillCategories.filter(cat => cat.id === activeCategory.value)
+
+  return rawList.map(cat => ({
+    ...cat,
+    title: getText(cat.title, lang),
+    skills: cat.skills.map(s => ({
+      ...s,
+      exp: getText(s.exp, lang)
+    }))
+  }))
 })
 
 function setCategory(id) {
@@ -55,6 +64,7 @@ function setCategory(id) {
           :key="cat.id"
           class="tab-btn"
           :class="{ active: activeCategory === cat.id }"
+          @click="setCategory(cat.id)"
           @mouseenter="playHoverSound"
         >
           {{ cat.label }}

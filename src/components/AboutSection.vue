@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { currentLang } from '../stores/languageStore'
 import { i18nText } from '../data/bilingualData'
-import { personalInfo } from '../data/resumeData'
+import { personalInfo, getText } from '../data/resumeData'
 import { playClickSound, playHoverSound } from '../utils/audio'
 import { useScrollReveal } from '../utils/useScrollReveal'
 
@@ -62,7 +62,7 @@ function scrollTo(id) {
               </div>
               <div class="chip" @mouseenter="playHoverSound">
                 <span class="chip-label">{{ t.labels.location }}</span>
-                <span class="chip-val">{{ personalInfo.location }}</span>
+                <span class="chip-val">{{ getText(personalInfo.location, currentLang) }}</span>
               </div>
               <div class="chip" @mouseenter="playHoverSound">
                 <span class="chip-label">{{ t.labels.education }}</span>

@@ -63,6 +63,28 @@ function handleClose() {
               </span>
             </div>
           </div>
+
+          <!-- Mobile App Store & Google Play Deployed Preview -->
+          <div v-if="project.appStoreImage || project.playStoreImage" class="body-section appstore-section">
+            <h4>📱 {{ currentLang === 'vi' ? 'Ứng Dụng Mobile Đã Deploy (App Store & Google Play)' : 'Deployed Mobile Apps (App Store & Google Play)' }}</h4>
+            <div class="mobile-apps-grid">
+              <div v-if="project.appStoreImage" class="appstore-preview-card">
+                <div class="app-card-header">
+                  <span class="appstore-tag store-ios"> iOS App Store</span>
+                  <span v-if="project.appStoreName" class="app-name-tag">{{ project.appStoreName }}</span>
+                </div>
+                <img :src="project.appStoreImage" :alt="project.appStoreName || project.name" class="appstore-img" />
+              </div>
+
+              <div v-if="project.playStoreImage" class="appstore-preview-card">
+                <div class="app-card-header">
+                  <span class="appstore-tag store-android">🤖 Android Google Play</span>
+                  <span v-if="project.playStoreName" class="app-name-tag">{{ project.playStoreName }}</span>
+                </div>
+                <img :src="project.playStoreImage" :alt="project.playStoreName || project.name" class="appstore-img" />
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Modal Footer Actions -->
@@ -277,6 +299,66 @@ function handleClose() {
 .cancel-btn:hover {
   color: #fff;
   background: rgba(255, 255, 255, 0.12);
+}
+
+.appstore-section {
+  margin-top: 10px;
+}
+
+.mobile-apps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appstore-preview-card {
+  position: relative;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.appstore-tag {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+.store-ios {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+
+.store-android {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.app-name-tag {
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.appstore-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Modal Fade Animation */

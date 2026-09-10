@@ -13,14 +13,17 @@ import ContactSection from './components/ContactSection.vue'
 import ProjectModal from './components/ProjectModal.vue'
 import ToastNotification from './components/ToastNotification.vue'
 import { personalInfo } from './data/resumeData'
+import { currentLang } from './stores/languageStore'
 
 const selectedProject = ref(null)
 const toastMessage = ref('')
 let toastTimer = null
 
-function triggerToast(msg = 'Đã sao chép email: jikid0973@gmail.com!') {
+function triggerToast(msg) {
   if (toastTimer) clearTimeout(toastTimer)
-  toastMessage.value = msg
+  const isEn = currentLang.value === 'en'
+  const defaultMsg = isEn ? `Copied Email: ${personalInfo.email}` : `Đã sao chép email: ${personalInfo.email}`
+  toastMessage.value = msg || defaultMsg
   toastTimer = setTimeout(() => {
     toastMessage.value = ''
   }, 3000)
@@ -29,7 +32,9 @@ function triggerToast(msg = 'Đã sao chép email: jikid0973@gmail.com!') {
 function handleCopyEmail(customMsg) {
   const email = personalInfo.email
   navigator.clipboard.writeText(email)
-  triggerToast(customMsg || `Đã sao chép Email (${email}) vào khay nhớ tạm!`)
+  const isEn = currentLang.value === 'en'
+  const defaultMsg = isEn ? `Copied Email (${email}) to clipboard!` : `Đã sao chép Email (${email}) vào khay nhớ tạm!`
+  triggerToast(customMsg || defaultMsg)
 }
 
 function openModal(project) {

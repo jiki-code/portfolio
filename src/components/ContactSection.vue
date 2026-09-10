@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import { currentLang } from '../stores/languageStore'
 import { i18nText } from '../data/bilingualData'
-import { personalInfo } from '../data/resumeData'
+import { personalInfo, getText } from '../data/resumeData'
 import { playClickSound, playHoverSound, playSuccessSound } from '../utils/audio'
 import { useScrollReveal } from '../utils/useScrollReveal'
 
@@ -98,7 +98,7 @@ function scrollToTop() {
             <div class="card-icon-box">📍</div>
             <div class="card-info">
               <span class="info-label">{{ t.locationLabel }}</span>
-              <span class="info-value text-white">{{ personalInfo.location }}</span>
+              <span class="info-value text-white">{{ getText(personalInfo.location, currentLang) }}</span>
             </div>
           </div>
         </div>
